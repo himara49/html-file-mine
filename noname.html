@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập thông tin</title>
+    <script>
+        function hienThongBao() {
+            const ten = document.getElementById('ten').value;
+            const tuoi = document.getElementById('tuoi').value;
+            if (ten && tuoi) {
+                alert(`Chào ${ten}, bạn hiện đang ${tuoi} tuổi`);
+            } else {
+                alert('Vui lòng nhập đầy đủ tên và tuổi của bạn!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nhập thông tin của bạn</h1>
+    <label for="ten">Tên:</label>
+    <input type="text" id="ten" name="ten" required>
+    <br><br>
+    <label for="tuoi">Tuổi:</label>
+    <input type="number" id="tuoi" name="tuoi" min="0" required>
+    <br><br>
+    <button onclick="hienThongBao()">Xác nhận</button>
+</body>
+</html>
+
